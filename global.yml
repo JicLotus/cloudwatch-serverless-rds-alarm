@@ -1,0 +1,20 @@
+ErrorTopic:
+  Type: "AWS::SNS::Topic"
+  Properties:
+    DisplayName: "Click Error Topic"
+
+RdsFreeStorageSpace:
+  Type: "AWS::CloudWatch::Alarm"
+  Properties:
+    AlarmDescription: "Alarm failing when a rds database is out of space"
+    AlarmActions:
+      - Ref: ErrorTopic
+    Namespace: "AWS/RDS"
+    MetricName: "FreeStorageSpace"
+    Statistic: "Sum"
+    Period: "900" # 15 minutes
+    # Threshold is in bytes
+    # Less than 1GB
+    Threshold: 1073741824
+    EvaluationPeriods: 1
+    ComparisonOperator: "LessThanThreshold"

@@ -1,0 +1,23 @@
+{
+  "name": "cloudwatch-serverless-rds-alarm",
+  "version": "1.0.0",
+  "description": "npm i --save serverless-plugin-aws-alerts",
+  "main": "index.js",
+  "dependencies": {
+    "serverless-plugin-aws-alerts": "^1.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JicLotus/cloudwatch-serverless-rds-alarm.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JicLotus/cloudwatch-serverless-rds-alarm/issues"
+  },
+  "homepage": "https://github.com/JicLotus/cloudwatch-serverless-rds-alarm#readme"
+}
